@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body >
+    <div class="img" style="background-image: url(./img/fondo.jpg);">
+
+ 
+    <!-- <img id="img" src="img\fondo.jpg"> -->
+    <div id="inf">
+        <div class="titulo">
+            Formulario
+        </div>
+        <div class="dat">Nombre
+            <input type="text" id="nom" placeholder="Digite su Nombre">
+        </div>
+        <div class="dat">Apellido
+            <input type="text" id="apll" placeholder="Digite su Apellido">
+        </div>
+        <div class="dat">Genero
+            <div class="genero">
+            <label for="ge">Masculino
+                <input type="radio" name="genero" id="m">
+            </label>
+            <label for="ge">Femenino
+                <input type="radio" name="genero" id="f">
+            </label>
+        </div>
+        </div>
+        <div class="dat">Teléfono
+            <input type="text" id="tl" placeholder="Digite su numero" required>
+        </div>
+
+        <div class="dat">Fecha de Nacimiento
+            <input type="date" name="" id="fc">
+        </div>
+        <div class="dat">Tipo de Documento
+            <select id="td">
+                <option value="C.C">Cédula de Ciudadania</option>
+                <option value="T.J">Tarjeta de Identidad</option>
+                <option value="T.E">Cédula de Extrangeria</option>
+            </select>
+        </div>
+        <div class="dat"> Numero de Documento
+            <input type="text" id="dc" placeholder=" Digite su Numero de Documento">
+        </div>
+        <div class="dat">Correo
+            <input type="email" id="correo" placeholder="Ingrese su correo">
+        </div>
+        <div id="button">
+            <button id="bt" onclick="Enviar(), pintar()">Enviar</button>
+
+        </div>
+        
+    </div>
+    <h2 id="listadat"></h2>  
+ </div>
+    <script>
+        
+        
+        let inf = [];
+
+        function Enviar() {
+            let gen = "";
+
+            if (document.getElementById("m").checked) {
+                console.log("Masculino");
+                gen = "Masculino"
+            } else {
+                console.log("Femenino");
+                gen = "Femenino"
+            }
+            
+        let datos = {}
+            datos = {
+            nombre: document.getElementById("nom").value,
+            apellido: document.getElementById("apll").value,
+            telefono: document.getElementById("tl").value,
+            fechana: document.getElementById("fc").value,
+            genero: gen,
+            tipodoc: document.getElementById("td").value,
+            NDocumento: document.getElementById("dc").value,
+            correo: document.getElementById("correo").value
+
+        }
+        console.log(datos);
+           
+        inf.push(datos)
+        console.log(inf);
+        }
+
+        
+
+
+        function pintar() {
+        inf.forEach((item, i) => {
+            let ul = document.createElement("ul")
+            let li = document.createElement("li")
+            li.textContent = item.nombre + " - " + item.apellido + 
+            item.genero + " - " + item.telefono + " - " + item.tipodoc + " - " + 
+            item. NDocumento + " - " + item.correo + " - " + 
+            item.fechana
+            ul.appendChild(li)
+            document.getElementById("listadat").appendChild(ul)
+            document.getElementById("inf") = "";
+        })
+    }
+    </script>
+
+
+
+</body>
+
+</html>

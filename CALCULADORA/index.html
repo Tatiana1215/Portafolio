@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    
+    <div class="t">
+        
+    <div id="cal">
+        <div id="resul">0</div>
+        <div id="info">
+            <button class="tecla" onclick="operador ('1')">1</button>
+            <button class="tecla" onclick="operador ('2')">2</button>
+            <button class="tecla" onclick="operador ('3')">3</button>
+            <button class="tecla" onclick="operacion('+')">+</button>
+            <button class="tecla" onclick="operador ('4')">4</button>
+            <button class="tecla" onclick="operador ('5')">5</button>
+            <button class="tecla" onclick="operador ('6')">6</button>
+            <button class="tecla" onclick="operacion ('-')">-</button>
+            <button class="tecla" onclick="operador ('7')">7</button>
+            <button class="tecla" onclick="operador ('8')">8</button>
+            <button class="tecla" onclick="operador ('9')">9</button>
+            <button class="tecla" onclick="operacion ('*')">*</button>
+            <button class="tecla" onclick="operador ('0')">0</button>
+            <button class="tecla" onclick="limpiar('c')">c</button>
+            <button class="tecla" onclick="operacion ('/')">/</button>
+            <button class="tecla" onclick="calcular('=')">=</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    let numero = "";
+    let operadorselect = "";
+    let ultdigitopre = "";
+    let resul = document.getElementById("resul");
+    function operador(num) {
+        numero = numero + num
+        resul.innerHTML = numero;
+    }
+    function operacion(oper) {
+        operadorselect = oper
+        ultdigitopre = operacion
+        numero = numero + oper
+        resul.innerHTML = numero;
+    }
+   
+    function limpiar() {
+        numero = "";
+        resul.innerHTML = "0";
+    }
+
+    function calcular() {
+            numero= eval(numero);
+            resul.innerHTML = numero;
+}
+       
+</script>
+
+</html>
+ 

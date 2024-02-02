@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body img{
+  /* display: flex;
+justify-content: center;   
+background-color: black; */
+}
+.img {
+    width: 100%;
+    background-size: cover;
+    padding: 4%;
+    display: flex;
+justify-content: center;  
+}
+.genero{
+    font-size: 15px;
+ font-weight: normal;
+}
+.dat {
+  font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    line-height: 5vh;
+}
+.titulo{
+    font-size: 50px;
+    text-align: center;
+}
+#inf {
+    background-color: rgba(255, 255, 255, 0.401);
+    box-shadow: 0px 0px 20px white;
+    width: 30%;
+}
+
+  
+#bt{
+    font-size: 20px;
+    width: 20%;
+    padding: 2%;
+    border-radius: 100px;
+    position: relative;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.901);
+}
+
+#nom{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+#apll{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+#tl{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+#fc{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+#td{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+#dc{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+#correo{
+    width: 100%;
+    height: 4vh;
+    border-radius: 100px;
+    text-align:center;
+    font-size: 15px;
+}
+@media screen  and (max-width:425px) {
+    #inf {
+        width: 80%;
+    }
+    #bt{
+        width: 30%;
+        position: relative;
+        left: 35%;
+    }
+}
+@media screen and (max-width:800px)and (min-width:600px) {
+    #inf {
+        width: 60%;
+    } 
+}
+
+@media screen and (max-width:2000px)and (min-width:1800px) {
+    #inf {
+        width: 60%;
+    } 
+}

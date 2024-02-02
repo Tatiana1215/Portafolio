@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+.t{
+    display: flex;
+    justify-content: center;
+}
+ .img img{
+    width: 4%;
+    position: fixed;
+    top: 80%;
+    left: 10%;
+
+}
+#cal {
+    background-color: black;
+    border-radius: 30px;
+    margin-top: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 40%;
+}
+
+#resul {
+    background-color: white;
+    font-size: 30px;
+    text-align: right;
+    border-radius: 100px;
+padding-right: 5%;
+padding-top: 1%;
+    height: 50px;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+button {
+    font-size: 40px;
+    /* text-align: center; */
+    background-color: aquamarine;
+    border-radius: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+   
+
+}
+
+.tecla {
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.tecla:hover {
+    background-color:rgb(4, 255, 171);
+}
