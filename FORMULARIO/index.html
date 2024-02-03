@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -110,17 +110,14 @@
                 document.getElementById("fc").value = "",
                 document.getElementById("td").value = "",
                 document.getElementById("dc").value = "",
-                document.getElementById("correo").value = "",
-
-
-
+                document.getElementById("correo").value = ""
 
 
                 console.log(datos);
             inf.push(datos)
             console.log(inf);
 
-        }
+        
 
         function pintar() {
             let tableBody = document.getElementById("listadat");
@@ -168,6 +165,180 @@
             }
             ); 
             
+        }
+
+    }
+
+    </script>
+
+
+
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="img" style="background-image: url(./img/fondo.jpg);">
+        <div id="inf">
+            <div class="titulo">
+                Formulario
+            </div>
+            <div class="dat">Nombre
+                <input type="text" id="nom" placeholder="Digite su Nombre">
+            </div>
+            <div class="dat">Apellido
+                <input type="text" id="apll" placeholder="Digite su Apellido">
+            </div>
+            <div class="dat">Genero
+                <div class="genero">
+                    <label for="ge">Masculino
+                        <input type="radio" name="genero" id="m">
+                    </label>
+                    <label for="ge">Femenino
+                        <input type="radio" name="genero" id="f">
+                    </label>
+                </div>
+            </div>
+            <div class="dat">Teléfono
+                <input type="text" id="tl" placeholder="Digite su numero" required>
+            </div>
+
+            <div class="dat">Fecha de Nacimiento
+                <input type="date" name="" id="fc">
+            </div>
+            <div class="dat">Tipo de Documento
+                <select id="td">
+                    <option value="C.C">Cédula de Ciudadania</option>
+                    <option value="T.J">Tarjeta de Identidad</option>
+                    <option value="T.E">Cédula de Extrangeria</option>
+                </select>
+            </div>
+            <div class="dat"> Numero de Documento
+                <input type="text" id="dc" placeholder=" Digite su Numero de Documento">
+            </div>
+            <div class="dat">Correo
+                <input type="email" id="correo" placeholder="Ingrese su correo">
+            </div>
+            <div id="button">
+                <button id="bt" onclick="Enviar(), pintar()">Enviar</button>
+
+            </div>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Nombres</td>
+                    <td>Apellidos</td>
+                    <td>Genero</td>
+                    <td>Telefono</td>
+                    <td>Fecha de nacimiento</td>
+                    <td>Tipo de documento</td>
+                    <td>Numero de documento</td>
+                    <td>Correo</td>
+
+                </tr>
+            </thead>
+            <tbody id="listadat">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+
+        let inf = [];
+
+        function Enviar() {
+            let gen = "";
+
+            if (document.getElementById("m").checked) {
+                console.log("Masculino");
+                gen = "Masculino"
+            } else {
+                console.log("Femenino");
+                gen = "Femenino"
+            }
+
+            let datos = {}
+            datos = {
+                nombre: document.getElementById("nom").value,
+                apellido: document.getElementById("apll").value,
+                telefono: document.getElementById("tl").value,
+                fechana: document.getElementById("fc").value,
+                genero: gen,
+                tipodoc: document.getElementById("td").value,
+                NDocumento: document.getElementById("dc").value,
+                correo: document.getElementById("correo").value
+            }
+            document.getElementById("nom").value = "",
+                document.getElementById("apll").value = "",
+                document.getElementById("tl").value = "",
+                document.getElementById("fc").value = "",
+                gen = "",
+                document.getElementById("td").value = "",
+                document.getElementById("dc").value = "",
+                document.getElementById("correo").value = ""
+                console.log(datos);
+            inf.push(datos)
+            console.log(inf);
+
+        }
+
+        function pintar() {
+            let tableBody = document.getElementById("listadat");
+    while (tableBody.firstChild) {
+        tableBody.removeChild(tableBody.firstChild);
+    }
+            inf.forEach((item, i) => {
+                let tr = document.createElement("tr");
+
+                let nombre = document.createElement("td");
+                nombre.textContent = item.nombre;
+                tr.appendChild(nombre);
+
+                let apellido = document.createElement("td");
+                apellido.textContent = item.apellido;
+                tr.appendChild(apellido);
+
+                let genero = document.createElement("td");
+                genero.textContent = item.genero;
+                tr.appendChild(genero);
+
+                let telefono = document.createElement("td");
+                telefono.textContent = item.telefono;
+                tr.appendChild(telefono);
+
+                let fechana = document.createElement("td");
+                fechana.textContent = item.fechana;
+                tr.appendChild(fechana);
+
+                let tipodoc = document.createElement("td");
+                tipodoc.textContent = item.tipodoc;
+                tr.appendChild(tipodoc);
+
+                let NDocumento = document.createElement("td");
+                NDocumento.textContent = item.NDocumento;
+                tr.appendChild(NDocumento);
+
+                let correo = document.createElement("td");
+                correo.textContent = item.correo;
+                tr.appendChild(correo);
+
+                document.getElementById("listadat").appendChild(tr);
+             
+
+            }
+            );
         }
 
 
