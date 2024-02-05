@@ -7,8 +7,6 @@ let dat = [];
 function agregar(prioridad) {
     let datos = {};
 
-   
-
     datos = {
         nombre: document.getElementById("text").value,
         prioridad: prioridad,
@@ -22,6 +20,11 @@ function agregar(prioridad) {
     dat.push(datos)
     console.log(dat) 
 
+    function alert(){
+        if(nombre=="" && fecha==""){
+             alert('ingrese los datos')
+        }
+    }
 }
 
 function ordenarDatos() {

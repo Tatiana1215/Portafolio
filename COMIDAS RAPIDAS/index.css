@@ -1692,18 +1692,23 @@ nav {
     }
 
     .telefonoh .WHATSAPP img {
-        width: 30%;
+        width: 2%;
 
 
     }
+    .telefonoh img {
+        width: 30%;
+        margin-top: -4px;
+    }
 
     .telefonoh p {
+    
         margin-top: 1px;
     }
 
     .telefonoh {
         padding-top: 30px;
-        font-size: 28px;
+        font-size: 0px;
         padding-left: 18px;
     }
 
@@ -2379,7 +2384,7 @@ nav {
 
 /* ----------------------------1326px-------------------------- */
 
-@media screen and (max-width:1440px) and (min-width:100px){
+@media screen and (max-width:1440px) and (min-width:1000px){
 
     /* -----------------------------baner------------------------------ */
     /* .inme {
@@ -2555,7 +2560,7 @@ nav {
 
   
     .telefonope .WHATSAPP img {
-        width: 50%;
+        width: 100%;
         position: relative;
         bottom: -3px;
         padding-left: 8px;
@@ -2566,7 +2571,7 @@ nav {
 
     .telefonope {
         padding-left: 12px;
-        font-size: 24px;
+        font-size: 20px;
         padding-top: 10px;
     }
 
@@ -2581,7 +2586,7 @@ nav {
     }
 
     .preciope {
-        font-size: 40px;
+        font-size: 30px;
         padding-left: 30px;
     }
 
@@ -2693,7 +2698,7 @@ nav {
         padding-top: 0%;
         font-size: 40px;
         width: 45%;
-        margin-left: 610px;
+        margin-left: 90vh;
         margin-bottom: 0px;
         position: absolute;
         margin-top: 10%;
@@ -2724,14 +2729,14 @@ nav {
 
     .imgs img {
         width: 70%;
-        margin-left: 120px;
+        margin-left: 90px;
     }
 
     .noms {
         padding-top: 0%;
-        font-size: 45px;
-        width: 45%;
-        margin-left: 620px;
+        font-size: 44px;
+        width: 50%;
+        margin-left: 90vh;
         margin-bottom: 0px;
         position: absolute;
         margin-top: 10%;
@@ -2778,14 +2783,14 @@ nav {
 
     .imgken img {
         width: 70%;
-        margin-left: 120px;
+        margin-left: 90px;
     }
 
     .nomken {
         padding-top: 0%;
         font-size: 45px;
-        width: 41%;
-        margin-left: 610px;
+        width: 49%;
+        margin-left: 90vh;
         margin-bottom: 0px;
         position: absolute;
         margin-top: 7%;
@@ -2833,7 +2838,7 @@ nav {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
-        margin-left: 87px;
+        margin-left: 65px;
         margin-top: 50px;
         margin-right: 20px;
 
@@ -2882,16 +2887,16 @@ nav {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
-        padding-left: 110px;
+        padding-left: 60px;
         padding-right: 40px;
         margin-top: 40px;
     }
 
     .nomcalle {
         padding-top: 0%;
-        font-size: 35px;
-        width: 50%;
-        margin-right: 60px;
+        font-size: 30px;
+        width: 55%;
+        margin-right: 0px;
         margin-bottom: 0px;
         position: absolute;
         margin-top: 11%;
@@ -2901,7 +2906,7 @@ nav {
 
     .imgcalle img {
         width: 70%;
-        margin-left: 120px;
+        margin-left: 90px;
     }
 
     .punprescalle1 {
@@ -2911,7 +2916,7 @@ nav {
     /* -------------------bebidas--------------------- */
     .be1 {
         grid-template-columns: repeat(2, 1fr);
-        padding-left: 90px;
+        padding-left: 20px;
         padding-top: 14%;
         padding-right: 0px;
     }
@@ -2944,8 +2949,8 @@ nav {
     .bebbt {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding-left: 120px;
-        padding-right: 50px;
+        padding-left: 56px;
+        padding-right: 5px;
         grid-gap: 10px;
         margin-top: 40px;
     }
@@ -3029,20 +3034,20 @@ nav {
 
     .adi1 {
         grid-template-columns: repeat(2, 1fr);
-        padding-left: 10px;
+        padding-left: 5px;
         padding-top: 12%;
         padding-right: 0px;
     }
 
     .imgadi1 img {
         width: 70%;
-        margin-left: 140px;
+        margin-left: 90px;
     }
 
     .nomadi {
         padding-top: 0%;
         font-size: 35px;
-        width: 45%;
+        width: 50%;
         margin-right: 0px;
         position: absolute;
         margin-top: 9%;
@@ -3372,13 +3377,13 @@ nav {
         grid-gap: 20px;
         padding-left: 80px;
         padding-right: 20px;
-        margin-top: 80px;
+        margin-top: 90px;
     }
 
     #papo {
         grid-template-columns: repeat(1, 1fr);
         margin-right: 0px;
-        padding-top: 7%;
+        padding-top: 20%;
     }
 
     .imgpa img {
@@ -3388,7 +3393,8 @@ nav {
 
 
     .nompa {
-        margin-top: 49%;
+        margin-top: 4%;
+        padding-top: 0%;
         font-size: 20px;
         width: 85%;
         margin-left: 95px;
@@ -3423,7 +3429,7 @@ nav {
     }
 
     .noms {
-        margin-top: 50%;
+        margin-top: 3%;
         padding-top: 1%;
         font-size: 20px;
         width: 80%;
@@ -3461,7 +3467,7 @@ nav {
     }
 
     .nomken {
-        margin-top: 50%;
+        margin-top: 3%;
         padding-top: 0%;
         font-size: 100%;
         width: 82%;
@@ -3552,7 +3558,7 @@ nav {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin-right: 0px;
-        padding-top: 23%;
+        padding-top: 18%;
     }
 
     .callejeri {
@@ -3566,7 +3572,8 @@ nav {
     }
 
     .nomcalle {
-        padding-top: 0%;
+        padding-top:0%;
+    
         font-size: 20px;
         width: 85%;
         margin-bottom: 0px;
@@ -3715,7 +3722,7 @@ nav {
         font-size: 20px;
         text-align: center;
         margin-top: 0px;
-        margin-left: -2px;
+        margin-left: 40px;
         width: 82%;
 
 
@@ -3742,7 +3749,7 @@ nav {
     .cele {
         padding-left: 80PX;
         padding-right: 20px;
-        padding-top: 9%;
+        padding-top: 19%;
     }
 
     .nomc {
@@ -4051,7 +4058,7 @@ nav {
     }
 
     .nompa {
-        margin-top: 95%;
+        margin-top: 5%;
         padding-top: 1%;
         font-size: 20px;
         width: 65%;
@@ -4080,7 +4087,7 @@ nav {
     }
 
     .noms {
-        margin-top: 95%;
+        margin-top: 5%;
         padding-top: 1%;
         font-size: 20px;
         width: 65%;
@@ -4114,7 +4121,7 @@ nav {
     }
 
     .nomken {
-        margin-top: 95%;
+        margin-top: 5%;
         padding-top: 0%;
         font-size: 100%;
         width: 65%;
@@ -4217,7 +4224,7 @@ nav {
         width: 100%;
         margin-bottom: 0px;
         margin-left: 0px;
-        padding-left: 20px;
+        padding-left: 80px;
         position: relative;
         right: 0px;
 
@@ -4356,7 +4363,7 @@ margin-left: 10px;
         font-size: 20px;
         text-align: center;
         margin-top: 0px;
-        width: 75%;
+        width: 90%;
 
 
     }
@@ -4396,8 +4403,8 @@ margin-left: 10px;
 
     .imgc img {
         width: 100%;
-     margin-left: auto;
-     margin-right: auto;
+     margin-left: 4vh;
+     margin-right: 0vh;
     }
 
     /* menu */
