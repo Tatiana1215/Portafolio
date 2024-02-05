@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="inform">
+        <input type="text" id="text" placeholder="Ingrese la información">
+        <input type="date" id="Fec">
+        <button id="A" onclick=" agregar('Baja'),pintar()">+</button>
+        <div class="btf">
+            <input type="button" value="✔" id="fle" onclick="agregar('Alta'),pintar()">
+            <select id="op" onchange="ordenarDatos()">
+                <option value="Ordenar">Ordenar</option>
+                <option value="Alto al mas Bajo">Alto al mas Bajo</option>
+                <option value="Bajo al mas Alto">Bajo al mas Alto</option>
+            </select>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td> Nombre</td>
+                <td>Prioridad</td>
+                <td>Fecha</td>
+            </tr>
+        </thead>
+        <tbody id="lista">
+        </tbody>
+    </table>
+
+</body>
+
+</html>

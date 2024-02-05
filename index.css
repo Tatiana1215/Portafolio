@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    /* background-color: rgb(237, 214, 237); */
-}
+
 .inicio{ 
      background-size: cover;
     width: 100%;
@@ -60,7 +58,8 @@ transition: transform 1s;
     #t{
        display: grid;
        grid-template-columns: repeat(2,1fr);
-       padding-bottom:20%;
+       grid-gap: 20px;
+       padding-bottom:60%;
    }
 }
 @media screen and (min-width:1800px) and (max-width:2000px){
