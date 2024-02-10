@@ -11,7 +11,12 @@ function agregar(prioridad) {
         nombre: document.getElementById("text").value,
         prioridad: prioridad,
         fecha: document.getElementById("Fec").value
-    }
+    } 
+
+  if (datos.nombre === "" && datos.fecha === "") {
+    prioridad="";
+    alert("ingrese los datos");
+  }
     document.getElementById("text").value = "",
         prioridad = "",
         document.getElementById("Fec").value = ""
@@ -19,13 +24,9 @@ function agregar(prioridad) {
     console.log(datos)
     dat.push(datos)
     console.log(dat) 
-
-    function alert(){
-        if(nombre=="" && fecha==""){
-             alert('ingrese los datos')
-        }
+ 
+  
     }
-}
 
 function ordenarDatos() {
     let opcion = document.getElementById("op").value;
@@ -56,19 +57,23 @@ function pintar() {
 
     dat.forEach((item, i) => {
         let tr = document.createElement("tr");
-
+        if (item.nombre !== "" && item.fecha !== "") {
         let nombre = document.createElement("td");
         nombre.textContent = item.nombre;
         tr.appendChild(nombre);
+        }
 
-        let prioridad = document.createElement("td");
-        prioridad.textContent = item.prioridad;
-        tr.appendChild(prioridad);
-
+        if (item.nombre !== "" && item.fecha !== "") {
+            let prioridad = document.createElement("td");
+            prioridad.textContent = item.prioridad;
+            tr.appendChild(prioridad);
+        }
+        
+        if (item.nombre !== "" && item.fecha !== "") {
         let fecha = document.createElement("td");
         fecha.textContent = item.fecha;
         tr.appendChild(fecha);
-
+        }
         document.getElementById("lista").appendChild(tr);
 
     });
