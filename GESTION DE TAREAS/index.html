@@ -9,26 +9,32 @@
     <script src="index.js"></script>
 </head>
 
-<body>
-    <div class="inform">
+<body  style=" background-image: url(./imgg/im3.jpg);">
+  <div id="todo" style=" background-image: url(./imgg/im.jpg);">
+    
+    <div class="inform"><div id="titulo">Getión de Tareas</div>
         <input type="text" id="text" placeholder="Ingrese la información">
         <input type="date" id="Fec">
+<div class="AB">
         <button id="A" onclick=" agregar('Baja'),pintar()">+</button>
-        <div class="btf">
             <input type="button" value="✔" id="fle" onclick="agregar('Alta'),pintar()">
-            <select id="op" onchange="ordenarDatos()">
+</div>
+         <div class="btf"> 
+           <select id="op" onchange="ordenarDatos()">
                 <option value="Ordenar">Ordenar</option>
                 <option value="Alto al mas Bajo">Alto al mas Bajo</option>
                 <option value="Bajo al mas Alto">Bajo al mas Alto</option>
             </select>
         </div>
     </div>
+</div>
     <table>
         <thead>
             <tr>
-                <td> Nombre</td>
-                <td>Prioridad</td>
-                <td>Fecha</td>
+                <th> Nombre</th>
+                <th>Prioridad</th>
+                <th>Fecha</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody id="lista">

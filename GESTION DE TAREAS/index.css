@@ -3,71 +3,140 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
 table {
-    width: 60%;
+    width: 20%;
     border-collapse: collapse;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+ margin-bottom: 7%;
+
 }
 
 thead {
     background-color: #f2f2f2;
     font-weight: bolder;
     font-size: 20px;
-  
+
 
 }
 
-th, td {
+tbody {
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+}
+
+th,
+tr,td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    border-left: 1px  solid #ddd;
-    border-right:  1px  solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     font-family: cursive;
+
+
 
 }
 
-th {
-    color: white;
+td {
+    justify-content: center;
 }
 
 tr:hover {
     background-color: #f5f5f5;
 }
 
-tr:nth-child(even){
-    background-color: rgb(255, 241, 255);
+tr:nth-child(even) {
+    background-color: rgb(228, 169, 228);
 }
 
 
+#todo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    background-color: rgba(84, 23, 128, 0.793);
+    margin-top: 7%;
+    padding-bottom: 2%;
+    border-radius: 80px;
+    box-shadow: 15px 15px 20px #cc3eff;
+}
+
+#titulo {
+    color: white;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-style: oblique;
+
+}
 
 .inform {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
     padding-top: 5%;
+    padding: 8%;
 }
 
 #text {
-    width: 20%;
+    width: 90%;
+    height: 6vh;
+    border-radius: 100px;
+    padding: 2%;
 }
 
 #Fec {
-    width: 15%;
+    width: 70%;
+    height: 6vh;
+    border-radius: 100px;
+    padding: 2%;
+}
+
+.AB {
+    display: flex;
+    gap: 10px;
 }
 
 #A {
-
+    width: 10%;
     font-size: 20px;
     font-weight: bolder;
+    animation-name: a;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#op {
+    width: 25%;
+    height: 6vh;
 }
 
 #fle {
+    width: 10%;
     font-size: 20px;
-
+    font-weight: bolder
 }
-#fle:hover, #A:hover{
-    background-color: rgb(255, 241, 255);
+
+#fle:hover,
+#A:hover {
+    background-color: rgb(254, 69, 254);
+}
+
+@media screen and (max-width:425px)and (min-width:300px){
+    #todo {
+        width: 80%;
+        border-radius: 80pxz
+
+    }
+    
 }

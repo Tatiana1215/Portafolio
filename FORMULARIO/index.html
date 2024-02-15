@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +40,7 @@
             <div class="dat">Tipo de Documento
                 <select id="td">
                     <option value="C.C">Cédula de Ciudadania</option>
-                    <option value="T.J">Tarjeta de Identidad</option>
+                    <option value="T.I">Tarjeta de Identidad</option>
                     <option value="T.E">Cédula de Extrangeria</option>
                 </select>
             </div>
@@ -57,72 +56,101 @@
             </div>
 
         </div>
-    
-        <table>
-            <thead>
-                <tr>
-                    <td>Nombres</td>
-                    <td>Apellidos</td>
-                    <td>Genero</td>
-                    <td>Telefono</td>
-                    <td>Fecha de nacimiento</td>
-                    <td>Tp.Doc </td>
-                    <td>Numero de Documento</td>
-                    <td>Correo</td>
-
-                </tr>
-            </thead>
-            <tbody id="listadat">
-
-            </tbody>
-        </table>
     </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Genero</td>
+                <td>Telefono</td>
+                <td>Fecha de nacimiento</td>
+                <td>Tp.Doc </td>
+                <td>Numero de Documento</td>
+                <td>Correo</td>
+                <td>Opciones</td>
+
+            </tr>
+        </thead>
+        <tbody id="listadat">
+
+        </tbody>
+    </table>
+
     <script>
 
 
         let inf = [];
+        let bdt = true;
+        let act = null;
 
         function Enviar() {
-            let gen = "";
 
-            if (document.getElementById("m").checked) {
-                console.log("Masculino");
-                gen = "Masculino"
+            console.log(bdt)
+            if (bdt == true) {
+                let gen = "";
+
+                if (document.getElementById("m").checked) {
+                    console.log("Masculino");
+                    gen = "Masculino"
+                } else {
+                    console.log("Femenino");
+                    gen = "Femenino"
+                }
+                let datos = {}
+                datos = {
+                    nombre: document.getElementById("nom").value,
+                    apellido: document.getElementById("apll").value,
+                    telefono: document.getElementById("tl").value,
+                    fechana: document.getElementById("fc").value,
+                    genero: gen,
+                    tipodoc: document.getElementById("td").value,
+                    NDocumento: document.getElementById("dc").value,
+                    correo: document.getElementById("correo").value
+                }
+                document.getElementById("listadat").textContent = "";
+                limpiar()
+                console.log(datos);
+                inf.push(datos)
+                console.log(inf);
+
+
+
             } else {
-                console.log("Femenino");
-                gen = "Femenino"
+                inf[act].nombre = document.getElementById("nom").value,
+                inf[act].apellido = document.getElementById("apll").value,
+                inf[act].telefono = document.getElementById("tl").value,
+                inf[act].fechana = document.getElementById("fc").value,
+                inf[act]. genero = document.getElementById("m").checked ? "Masculino":
+                inf[act]. genero = document.getElementById("f").checked ?"Femenino" :
+                inf[act].tipodoc = document.getElementById("td").vaue,
+                inf[act].NDocumento = document.getElementById("dc").value,
+                inf[act].correo = document.getElementById("correo").value,
+                document.getElementById("listadat").textContent = "";
+                bdt = true;
+                limpiar();
+
             }
 
-            let datos = {}
-            datos = {
-                nombre: document.getElementById("nom").value,
-                apellido: document.getElementById("apll").value,
-                telefono: document.getElementById("tl").value,
-                fechana: document.getElementById("fc").value,
-                genero: gen,
-                tipodoc: document.getElementById("td").value,
-                NDocumento: document.getElementById("dc").value,
-                correo: document.getElementById("correo").value
-            }
+
+
+        }
+        function limpiar() {
             document.getElementById("nom").value = "",
                 document.getElementById("apll").value = "",
                 document.getElementById("tl").value = "",
                 document.getElementById("fc").value = "",
-                gen = "",
-                document.getElementById("td").value = "",
+                document.getElementById("f").checked = false
+            document.getElementById("m").checked = false
+            document.getElementById("td").value = "",
                 document.getElementById("dc").value = "",
                 document.getElementById("correo").value = ""
-                console.log(datos);
-            inf.push(datos)
-            console.log(inf);
-
         }
-
         function pintar() {
-            let tableBody = document.getElementById("listadat");
-    while (tableBody.firstChild) {
-        tableBody.removeChild(tableBody.firstChild);
-    }
+            // let tableBody = document.getElementById("listadat");
+            // while (tableBody.firstChild) {
+            //     tableBody.removeChild(tableBody.firstChild);
+            // }
             inf.forEach((item, i) => {
                 let tr = document.createElement("tr");
 
@@ -157,9 +185,48 @@
                 let correo = document.createElement("td");
                 correo.textContent = item.correo;
                 tr.appendChild(correo);
+                celda = document.createElement("td")
+
+
+                let eliminar = document.createElement("button")
+                eliminar.textContent = "❌";
+                eliminar.addEventListener("click", () => {
+                    listadat.removeChild(tr);
+                    inf.splice(i, 1); // Eliminar el elemento correspondiente del array dat
+                });
+
+                let editar = document.createElement("button")
+                editar.textContent = "✏️"
+
+
+                editar.addEventListener("click", () => {
+                    console.log(item);
+                    bdt = false
+                    document.getElementById("nom").value = item.nombre;
+                    document.getElementById("apll").value = item.apellido;
+                    if (item.genero === "Masculino") {
+                        document.getElementById("m").checked = true;
+                    } else {
+                        document.getElementById("f").checked = true;
+                    }
+                    document.getElementById("tl").value = item.telefono;
+                    document.getElementById("fc").value = item.fechana;
+                    document.getElementById("td").value = item.tipodoc;
+                    document.getElementById("dc").value = item.NDocumento;
+                    document.getElementById("correo").value = item.correo;
+                    act = i;
+
+
+
+                })
+
+                tr.appendChild(eliminar)
+                tr.appendChild(editar)
+                td.appendChild(tr)
 
                 document.getElementById("listadat").appendChild(tr);
-             
+
+
 
             }
             );
